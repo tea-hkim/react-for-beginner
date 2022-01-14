@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css";
+import { useEffect, useState } from "react";
+import Button from "./Button";
 
 function App() {
+  const [toDo, setToDo] = useState("");
+  const [toDoList, setToDoList] = useState([]);
+  const onChange = (event) => setToDo(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo === "") return;
+    setToDoList((cur) => [...cur, toDo]);
+    setToDo("");
+  };
+  const Reset = () => {
+    setToDoList([]);
+    setToDo("");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>To do ({toDoList.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          value={toDo}
+          type="text"
+          placeholder="Write your to do..."
+          onChange={onChange}
+        />
+        <button>button</button>
+      </form>
+      <ul>
+        {toDoList.map((todo, index) => (
+          <div>
+            <li key={index}>{todo}</li>
+          </div>
+        ))}
+      </ul>
+      <button onClick={Reset}>Reset</button>
     </div>
   );
 }
