@@ -13,7 +13,7 @@
 
 .movie_img {
   position: relative;
-  top: -20px;
+  top: -30px;
 }
 
 .movie_title {
@@ -31,10 +31,11 @@
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .movie li {
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   padding: 2px 10px;
   background-color: rgba(1, 1, 1, 0.8);
   border-radius: 10px;
