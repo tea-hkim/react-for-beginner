@@ -1,0 +1,42 @@
+.movie {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
+  font-weight: 400;
+  background-color: white;
+  box-shadow: 2px 5px 10px rgba(1, 1, 1, 0.4);
+  padding: 10px 20px 10px 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.movie_img {
+  position: relative;
+  top: -20px;
+}
+
+.movie_title {
+  font-weight: 700;
+  font-size: 30px;
+  color: black;
+  margin: 0;
+}
+
+.movie p {
+  color: rgba(1, 1, 1, 0.8);
+}
+
+.movie ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.movie li {
+  margin-right: 10px;
+  padding: 2px 10px;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-radius: 10px;
+  color: white;
+}

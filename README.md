@@ -13,7 +13,7 @@
 #### 2. What was used to make the `Basic Movie Application`
 
      1. useState
-     2. react-router-dom (which is updated in 2021)
+     2. react-router-dom (which was updated in 2021)
      3. map function
      4. useParams
      5. Link to
